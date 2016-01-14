@@ -54,6 +54,8 @@ mkdir -p $RPM_BUILD_ROOT/lib/systemd/system/basic.target.wants/
 %defattr(-,root,root,-)
 /var/lib/environment/ofono/plugins.conf
 %{_sysconfdir}/camera/pipelines.conf
+/lib/firmware/RM-680_Himalaya_AUO_V1_1.raw
+/lib/firmware/RM-696_Pyrenees_SMD_V1_6.raw
 
 %files -n n950-n9-patterns
 %defattr(-,root,root,-)
