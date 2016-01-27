@@ -1,0 +1,16 @@
+#!/bin/bash
+# Set up a configuration for sensord for N9 or N950
+
+cd /etc/sensorfw/
+if [ ! -f primaryuse.conf -a -f /etc/boardname ]; then
+	# Non DT kernels have rm_680 for both N9 & N950
+	# DT kernels have arm_nokia_n9..
+	# In both we can use /proc/1/environ to tell them apart
+	if `grep -q "rm_680" /etc/boardname` || `grep -q "arm_nokia_n9" /etc/boardname`; then
+		if grep -q 'RM-696' /proc/1/environ; then
+			ln -s sensord.conf.d/sensord-rm_696.conf primaryuse.conf
+		else
+			ln -s sensord.conf.d/sensord-rm_680.conf primaryuse.conf
+		fi
+	fi
+fi
