@@ -9,3 +9,6 @@ install:
 	install -D -m 644 conf/camera-pipelines.conf $(DESTDIR)/etc/camera/pipelines.conf
 	install -D -m 644 conf/RM-680_Himalaya_AUO_V1_1.raw $(DESTDIR)/lib/firmware/RM-680_Himalaya_AUO_V1_1.raw
 	install -D -m 644 conf/RM-696_Pyrenees_SMD_V1_6.raw $(DESTDIR)/lib/firmware/RM-696_Pyrenees_SMD_V1_6.raw
+	install -D -m 644 conf/sensord-rm_680.conf $(DESTDIR)/etc/sensorfw/sensord.conf.d/sensord-rm_680.conf
+	install -D -m 644 conf/sensord-rm_696.conf $(DESTDIR)/etc/sensorfw/sensord.conf.d/sensord-rm_696.conf
+	install -D -m 750 conf/sensord-daemon-conf-setup $(DESTDIR)/usr/bin/sensord-daemon-conf-setup
