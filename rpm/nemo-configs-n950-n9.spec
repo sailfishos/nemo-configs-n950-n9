@@ -45,7 +45,8 @@ Requires:   kernel-adaptation-n950 >= 3.5.3.20141127.1
 make
 
 %post
-%{_bindir}/sensord-daemon-conf-setup
+%{_oneshotdir}/sensord-daemon-conf-setup
+%{_bindir}/add-oneshot sensord-daemon-conf-setup
 
 %install
 rm -rf %{buildroot}
@@ -59,7 +60,7 @@ mkdir -p $RPM_BUILD_ROOT/lib/systemd/system/basic.target.wants/
 %{_sysconfdir}/camera/pipelines.conf
 /lib/firmware/RM-680_Himalaya_AUO_V1_1.raw
 /lib/firmware/RM-696_Pyrenees_SMD_V1_6.raw
-%{_bindir}/sensord-daemon-conf-setup
+%attr(755, root, root) %{_oneshotdir}/sensord-daemon-conf-setup
 %{_sysconfdir}/sensorfw/sensord.conf.d/sensord-rm_680.conf
 %{_sysconfdir}/sensorfw/sensord.conf.d/sensord-rm_696.conf
 

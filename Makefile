@@ -11,4 +11,4 @@ install:
 	install -D -m 644 conf/RM-696_Pyrenees_SMD_V1_6.raw $(DESTDIR)/lib/firmware/RM-696_Pyrenees_SMD_V1_6.raw
 	install -D -m 644 conf/sensord-rm_680.conf $(DESTDIR)/etc/sensorfw/sensord.conf.d/sensord-rm_680.conf
 	install -D -m 644 conf/sensord-rm_696.conf $(DESTDIR)/etc/sensorfw/sensord.conf.d/sensord-rm_696.conf
-	install -D -m 750 conf/sensord-daemon-conf-setup $(DESTDIR)/usr/bin/sensord-daemon-conf-setup
+	install -D -m 750 conf/sensord-daemon-conf-setup $(DESTDIR)/usr/lib/oneshot.d/sensord-daemon-conf-setup
