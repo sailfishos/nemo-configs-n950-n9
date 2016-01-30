@@ -63,6 +63,7 @@ mkdir -p $RPM_BUILD_ROOT/lib/systemd/system/basic.target.wants/
 %attr(755, root, root) %{_oneshotdir}/sensord-daemon-conf-setup
 %{_sysconfdir}/sensorfw/sensord.conf.d/sensord-rm_680.conf
 %{_sysconfdir}/sensorfw/sensord.conf.d/sensord-rm_696.conf
+%{_sysconfdir}/xdg/QtProject/Sensors.conf
 
 %files -n n950-n9-patterns
 %defattr(-,root,root,-)
