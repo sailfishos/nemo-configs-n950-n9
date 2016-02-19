@@ -46,7 +46,7 @@ make
 
 %post
 %{_oneshotdir}/sensord-daemon-conf-setup
-%{_bindir}/add-oneshot sensord-daemon-conf-setup
+%{_bindir}/add-oneshot --late sensord-daemon-conf-setup
 
 %install
 rm -rf %{buildroot}
